@@ -68,15 +68,15 @@ const SideBar = () => {
                 <img
                   style={{ width: "30px", height: "30px", borderRadius: "8px" }}
                   src={logo}
-                  alt="Argon"
+                  alt="Atlas"
                 />
                 <Typography
-                  variant="h4"
+                  variant="h3"
                   fontWeight="bold"
                   textTransform="capitalize"
                   color={colors.greenAccent[500]}
                 >
-                  Argon
+                  Atlas
                 </Typography>
               </Box>
             )}
@@ -86,36 +86,6 @@ const SideBar = () => {
           </Box>
         </MenuItem>
       </Menu>
-      {!collapsed && (
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "10px",
-            mb: "25px",
-          }}
-        >
-          <Avatar
-            alt="avatar"
-            src={avatar}
-            sx={{ width: "100px", height: "100px" }}
-          />
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
-              Tony Stark
-            </Typography>
-            <Typography
-              variant="h6"
-              fontWeight="500"
-              color={colors.greenAccent[500]}
-            >
-              VP Fancy Admin
-            </Typography>
-          </Box>
-        </Box>
-      )}
-
       <Box mb={5} pl={collapsed ? undefined : "5%"}>
         <Menu
           menuItemStyles={{
@@ -153,6 +123,12 @@ const SideBar = () => {
             },
           }}
         >
+          <Item
+            title="Manage Customers"
+            path="/customers"
+            colors={colors}
+            icon={<PeopleAltOutlined />}
+          />
           <Item
             title="Manage Team"
             path="/team"
