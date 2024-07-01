@@ -23,6 +23,7 @@ import {
   Geography,
   Calendar,
   Stream,
+  Login,
 } from "./scenes";
 
 const router = createBrowserRouter(
@@ -41,6 +42,7 @@ const router = createBrowserRouter(
       <Route path="/line" element={<Line />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/geography" element={<Geography />} />
+      <Route path="/login" element={<Login />} />
     </Route>
   )
 );
