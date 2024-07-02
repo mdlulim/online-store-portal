@@ -27,11 +27,10 @@ if (SessionProvider.isValid()) {
 class AuthService { 
   
 
-    static async login(username, password, device, geoinfo){
+    static async login(username, password){
         
         const apiURL = Config.API.BASE_URL_LOGIN;
-        console.log(apiURL+'/login',{"user":username, "password":password, "device":device, "geoinfo": geoinfo})
-        const res    = await axios.post(apiURL+'/login',{"user":username, "password":password});
+        const res    = await axios.post(apiURL+'/Login',{"username":username, "password":password});
         return res;
     }
 
